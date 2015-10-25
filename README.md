@@ -1,6 +1,8 @@
 # Assignment_TidyData
 ####This repo is for Coursera: Getting and Cleanning Data- class assignment.
 ####Raw data is saved in project.zip and project folder. These files are not required as the R script will download the files from URL if those files are not presented in the working directory
+####Tidy data (step 1-4) is saved in xy.txt
+####separated summary data (step 5) is saved in agg.txt
 ####R script is saved in run_analysis.R, including the following steps:
 ####1. load dplyr and reshape2 packages;
 ####2. download raw data;
