@@ -87,6 +87,6 @@ xy_sub <- cbind(xy,sub)
 agg <- aggregate(xy_sub[,1:79],by=list(xy_sub$subject,xy_sub$activity_name),mean)
 #rename the first two columns
 agg <- rename(agg,Subject=Group.1,Activity=Group.2)
-writt.table(agg,"agg.txt",row.names = F)
+write.table(agg,"agg.txt",row.names = F)
 #clean up
 rm(list=setdiff(ls(),c("xy","agg")))
