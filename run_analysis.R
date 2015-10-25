@@ -51,7 +51,7 @@ act <- read.table("project/activity_labels.txt",header = F,col.names = c("activi
 y_act <- merge(x=y,y=act,by.x=1,by.y=1, all.x=TRUE)
 # xy is the tidy data that includes data and descriptive activities for test + train
 xy <- cbind(sub,y_act[2])
-
+write.table(xy,"xy.txt",row.names = F)
 # 4. Appropriately labels the data set with descriptive variable names.
 xy_col <- colnames(xy)
 #replace colnames with descriptive variable names
@@ -87,5 +87,6 @@ xy_sub <- cbind(xy,sub)
 agg <- aggregate(xy_sub[,1:79],by=list(xy_sub$subject,xy_sub$activity_name),mean)
 #rename the first two columns
 agg <- rename(agg,Subject=Group.1,Activity=Group.2)
+writt.table(agg,"agg.txt",row.names = F)
 #clean up
 rm(list=setdiff(ls(),c("xy","agg")))
