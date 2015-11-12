@@ -84,7 +84,7 @@ colnames(q3_data)[1:2]<-c("subj","act_code")
 colnames(activity_labels)[1:2] <- c("act_code","act_name")
 #merge data by act_cod
 q3_final_data <- merge(q3_data,activity_labels, by = 'act_code')
-q4_final_data <- q3_final_data #it's just foravoid misunderstanding
+q4_final_data <- q3_final_data #it's just for avoiding misunderstanding
 #get final data
 write.table(q4_final_data, "./course_project/q4_data.txt", sep="\t", row.names = FALSE)
 
